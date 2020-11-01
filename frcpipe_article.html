@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alata">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+</head>
+
+<body style="background: rgb(23,25,35);">
+    <div id="page-container" style="position: relative;min-height: 100vh;">
+        <div id="content-wrap">
+            <header style="background: url(&quot;assets/img/32b877ed4aa7778cc7d43ebb7d95a6f1.png&quot;) center / cover no-repeat;">
+                <nav class="navbar navbar-light navbar-expand-md navigation-clean" style="background: #212529c5;">
+                    <div class="container"><a class="navbar-brand" href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Home</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                        <div
+                            class="collapse navbar-collapse" id="navcol-1">
+                            <ul class="nav navbar-nav ml-auto">
+                                <li class="nav-item"><a class="nav-link active" href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">About</a></li>
+                                <li class="nav-item"><a class="nav-link active" href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Skills</a></li>
+                                <li class="nav-item"><a class="nav-link" href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Experience</a></li>
+                                <li class="nav-item"><a class="nav-link" href="projects.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Projects</a></li>
+                            </ul>
+                    </div>
+        </div>
+        </nav>
+        </header>
+        <main style="height: 113rem;">
+            <section>
+                <div class="container">
+                    <div class="row" style="padding-top: 2rem;">
+                        <div class="col">
+                            <h1 style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Custom FRC Pipelines</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col d-xl-flex justify-content-xl-start align-items-xl-center"><img src="assets/img/custom%20pipeline%20with%20kmeans.gif"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h2 style="color: #ebeff1;">Inspiration</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;">Majority of my work on my FRC team revolved around computer vision. CV and its applications to robotics have always been very interesting to me. However, most of what ended up on our robot used a system called the Limelight.
+                                This is an all-in-one computer vision platform that has a camera and a small computer on board that runs the computer vision pipelines. It was a very convenient solution, but it was expensive and would randomly crash (even
+                                during matches) quite often. So I set out to build my own alternative to the Limelight, mainly because I felt I could make something better and I've always wanted to implement my own computer vision pipelines. And I failed.
+                                But, I did learn a lot of things and I am still very proud of the things I did manage to do, which is why I wanted to list this on my portfolio.<br></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h2 style="color: #ebeff1;">How it Works</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;">The hardware itself took various different forms but was still fundamentally the same as a Limelight - a Raspberry Pi with a camera, with some high-powered LED's for picking up targets. It was very similar to the Limelight
+                                in terms of software as well, it didn't work as well but it worked in the same way as you would configure its settings via a web browser.<br>It's very hard to explain this without going into all the little details which
+                                would take a long time. Instead, I'll talk about some of the challenges, what I learned, and link the code below.<br></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h2 style="color: #ebeff1;">Challenges</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;"><em>A lot</em>. Obviously there were issues getting the web interface to work and all the other components involved with this system but the biggest challenges were (1) making sure the code ran as fast as possible, and (2)
+                                getting the hardware together. The former was because I was making the computer vision pipelines entirely by myself, and they needed to be able to process a certain number of frames per second (FPS) to be giving a steady
+                                stream of data to the robot. As for the latter, the hardware was a very difficult, mainly because I has set myself up to go for the small, neat form factor as the Limelight.<br>Obviously this whole project was very difficult,
+                                but I did it because I was very interested in it, I ended up learning many new things and it was a lot of fun.<br></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h2 style="color: #ebeff1;">What I Learned</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;">In terms of technical things, <em>a lot</em>. I learned about web servers, WebSockets, threading, multiprocessing, inter-process communication (IPC) via pipes, queues, stacks, and sockets, double buffering, and a lot of OpenCV
+                                - it's an amazing library although it can be a bit difficult to debug at times.<br>Another thing I learned was the need to plan out a project in order to get it done on time, and the importance of having a team of people
+                                not only to work on it but to continue my work once I leave the team - because that was the biggest loss to me. I still don't regret doing this project and making these mistakes because of all the new things I learned.<br></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h2 style="color: #ebeff1;">See the Code</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col"><a class="btn btn-primary" role="button" data-bs-hover-animate="pulse" style="background: rgba(255,255,255,0);border-style: none;" href="https://github.com/king-shak/VisionDev">See the code here →<br></a></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <div class="footer-basic" style="background: url(&quot;assets/img/32b877ed4aa7778cc7d43ebb7d95a6f1.png&quot;) center / cover no-repeat, #212529c5;background-blend-mode: multiply;">
+        <footer>
+            <div class="social"><a href="https://github.com/king-shak" style="color: #ebeff1;"><i class="icon ion-social-github" style="color: #ebeff1;"></i></a><a href="https://gitlab.com/king-shak" style="color: #ebeff1;"><i class="fab fa-gitlab" style="color: #ebeff1;"></i></a>
+                <a
+                    href="https://www.linkedin.com/in/shakeel-khan-0a1278169/" style="color: #ebeff1;"><i class="fab fa-linkedin-in" style="color: #ebeff1;"></i></a><a href="mailto:skhan001@uw.edu" style="color: #ebeff1;"><i class="far fa-envelope" style="color: #ebeff1;"></i></a></div>
+            <ul class="list-inline">
+                <li class="list-inline-item" style="color: #ebeff1;"><a href="index.html" style="font-family: ABeeZee, sans-serif;">About</a></li>
+                <li class="list-inline-item"><a href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Skills</a></li>
+                <li class="list-inline-item"><a href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Experience</a></li>
+                <li class="list-inline-item"><a href="projects.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Projects</a></li>
+            </ul>
+            <p class="copyright" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Made with BootStrap Studio and hosted with GitHub Pages&nbsp;<a href="#">here</a></p>
+        </footer>
+    </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/script.min.js"></script>
+</body>
+
+</html>
