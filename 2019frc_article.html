@@ -22,105 +22,92 @@
             <header style="background: url(&quot;assets/img/32b877ed4aa7778cc7d43ebb7d95a6f1.png&quot;) center / cover no-repeat;">
                 <nav class="navbar navbar-light navbar-expand-md navigation-clean" style="background: #212529c5;">
                     <div class="container"><a class="navbar-brand" href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Home</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
-                        <div
-                            class="collapse navbar-collapse" id="navcol-1">
+                        <div class="collapse navbar-collapse" id="navcol-1">
                             <ul class="nav navbar-nav ml-auto">
                                 <li class="nav-item"><a class="nav-link active" href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">About</a></li>
                                 <li class="nav-item"><a class="nav-link active" href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Skills</a></li>
                                 <li class="nav-item"><a class="nav-link" href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Experience</a></li>
                                 <li class="nav-item"><a class="nav-link" href="projects.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Projects</a></li>
                             </ul>
+                        </div>
                     </div>
+                </nav>
+            </header>
+            <main style="height: 113rem;">
+                <section>
+                    <div class="container">
+                        <div class="row" style="padding-top: 2rem;">
+                            <div class="col">
+                                <h1 style="color: #ebeff1;font-family: ABeeZee, sans-serif;">2019 FRC Vision Targeting</h1>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col d-xl-flex justify-content-xl-start align-items-xl-center"><img src="assets/img/automated%20hatch%20placement.gif"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <h2 style="color: #ebeff1;">Inspiration</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p style="color: #ebeff1;">This was done for the 2019 FRC game Deep Space, and part of the game involved placing these circular acrylic panels called "hatch panels" onto a certain element of the field called the "cargo ship" to patch the holes in the ship. We knew from the beginning we wanted to automate the process of lining up with the cargo ship and placing the hatch panel, as the tolerances for this were very tight (you basically had to place them straight on).<br></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <h2 style="color: #ebeff1;">How it Works</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p style="color: #ebeff1;">It uses a Limelight to find the cargo ship and determine both how far away we are from it and our orientation in relation to it. A Limelight is an all-in-one computer vision platform that has a camera and a small computer on board that runs the computer vision pipelines. The pipelines are the bit of software that take the raw images from the camera and processes them to extract the information about the target.<br>Once we know how far away we are from the target (the spot to place the hatch panel on the cargo ship) and our orientation in relation to it, we use our motion profiling software to define a path for the robot to follow autonomously to the target. Motion profiling is an controls algorithm that defines the movement of the robot as a series of steps. Each step defines the velocity, acceleration, and orientation of the robot at a certain time point. These steps are then combined to make our path (which is simple a sequence of steps).<br>As we approach the target, we automatically extend our hatch placing mechanism, and once me make contact we retract it, securing the hatch panel in place.<br></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <h2 style="color: #ebeff1;">Challenges</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p style="color: #ebeff1;">An interesting challenge we had was that the robot would go towards the cargo ship at an angle, which meant the hatch panel would get kind of awkwardly stuck in the cargo ship. It was also going rather fast even towards the end of the path (right up along the cargo ship), which meant it was crashing into the cargo ship.<br>Essentially, the robot was generating paths to follow that went too far forward (which causes the crashing into the cargo ship) because between the time the robot decided to calculate a path and actually had one, it had already moved forwards a significant amount, essentially offsetting the path it generates - this is called a lack of latency compensation. To fix this, the robot would detect if it were within a certain distance from the cargo ship, where it would then manually shorten the path to avoid crashing into the cargo ship.<br></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <h2 style="color: #ebeff1;">What I Learned</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p style="color: #ebeff1;">The most valuable learning experience from this was fixing the latency compensation issue. Although I had heard of latency compensation I had never seen it myself, let alone had to fix it. Learning about this issue and the approaches to solving it was very interesting.<br></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <h2 style="color: #ebeff1;">See the Code</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col"><a class="btn btn-primary" role="button" data-bs-hover-animate="pulse" style="background: rgba(255,255,255,0);border-style: none;" href="https://github.com/FRCTeam2910/2019CompetitionRobot">See the code here →<br></a></div>
+                        </div>
+                    </div>
+                </section>
+            </main>
         </div>
-        </nav>
-        </header>
-        <main style="height: 113rem;">
-            <section>
-                <div class="container">
-                    <div class="row" style="padding-top: 2rem;">
-                        <div class="col">
-                            <h1 style="color: #ebeff1;font-family: ABeeZee, sans-serif;">2019 FRC Vision Targeting</h1>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col d-xl-flex justify-content-xl-start align-items-xl-center"><img src="assets/img/automated%20hatch%20placement.gif"></div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <h2 style="color: #ebeff1;">Inspiration</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <p style="color: #ebeff1;">This was done for the 2019 FRC game Deep Space, and part of the game involved placing these circular acrylic panels called "hatch panels" onto a certain element of the field called the "cargo ship" to patch the holes in the
-                                ship. We knew from the beginning we wanted to automate the process of lining up with the cargo ship and placing the hatch panel, as the tolerances for this were very tight (you basically had to place them straight on).<br></p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <h2 style="color: #ebeff1;">How it Works</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <p style="color: #ebeff1;">It uses a Limelight to find the cargo ship and determine both how far away we are from it and our orientation in relation to it. A Limelight is an all-in-one computer vision platform that has a camera and a small computer on
-                                board that runs the computer vision pipelines. The pipelines are the bit of software that take the raw images from the camera and processes them to extract the information about the target.<br>Once we know how far away
-                                we are from the target (the spot to place the hatch panel on the cargo ship) and our orientation in relation to it, we use our motion profiling software to define a path for the robot to follow autonomously to the target.
-                                Motion profiling is an controls algorithm that defines the movement of the robot as a series of steps. Each step defines the velocity, acceleration, and orientation of the robot at a certain time point. These steps are
-                                then combined to make our path (which is simple a sequence of steps).<br>As we approach the target, we automatically extend our hatch placing mechanism, and once me make contact we retract it, securing the hatch panel in
-                                place.<br></p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <h2 style="color: #ebeff1;">Challenges</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <p style="color: #ebeff1;">An interesting challenge we had was that the robot would go towards the cargo ship at an angle, which meant the hatch panel would get kind of awkwardly stuck in the cargo ship. It was also going rather fast even towards the
-                                end of the path (right up along the cargo ship), which meant it was crashing into the cargo ship.<br>Essentially, the robot was generating paths to follow that went too far forward (which causes the crashing into the cargo
-                                ship) because between the time the robot decided to calculate a path and actually had one, it had already moved forwards a significant amount, essentially offsetting the path it generates - this is called a lack of latency
-                                compensation. To fix this, the robot would detect if it were within a certain distance from the cargo ship, where it would then manually shorten the path to avoid crashing into the cargo ship.<br></p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <h2 style="color: #ebeff1;">What I Learned</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <p style="color: #ebeff1;">The most valuable learning experience from this was fixing the latency compensation issue. Although I had heard of latency compensation I had never seen it myself, let alone had to fix it. Learning about this issue and the
-                                approaches to solving it was very interesting.<br></p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
-                            <h2 style="color: #ebeff1;">See the Code</h2>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col"><a class="btn btn-primary" role="button" data-bs-hover-animate="pulse" style="background: rgba(255,255,255,0);border-style: none;" href="https://github.com/FRCTeam2910/2019CompetitionRobot">See the code here →<br></a></div>
-                    </div>
-                </div>
-            </section>
-        </main>
-    </div>
-    <div class="footer-basic" style="background: url(&quot;assets/img/32b877ed4aa7778cc7d43ebb7d95a6f1.png&quot;) center / cover no-repeat, #212529c5;background-blend-mode: multiply;">
-        <footer>
-            <div class="social"><a href="https://github.com/king-shak" style="color: #ebeff1;"><i class="icon ion-social-github" style="color: #ebeff1;"></i></a><a href="https://gitlab.com/king-shak" style="color: #ebeff1;"><i class="fab fa-gitlab" style="color: #ebeff1;"></i></a>
-                <a
-                    href="https://www.linkedin.com/in/shakeel-khan-0a1278169/" style="color: #ebeff1;"><i class="fab fa-linkedin-in" style="color: #ebeff1;"></i></a><a href="mailto:skhan001@uw.edu" style="color: #ebeff1;"><i class="far fa-envelope" style="color: #ebeff1;"></i></a></div>
-            <ul class="list-inline">
-                <li class="list-inline-item" style="color: #ebeff1;"><a href="index.html" style="font-family: ABeeZee, sans-serif;">About</a></li>
-                <li class="list-inline-item"><a href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Skills</a></li>
-                <li class="list-inline-item"><a href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Experience</a></li>
-                <li class="list-inline-item"><a href="projects.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Projects</a></li>
-            </ul>
-            <p class="copyright" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Made with BootStrap Studio and hosted with GitHub Pages&nbsp;<a href="#">here</a></p>
-        </footer>
-    </div>
+        <div class="footer-basic" style="background: url(&quot;assets/img/32b877ed4aa7778cc7d43ebb7d95a6f1.png&quot;) center / cover no-repeat, #212529c5;background-blend-mode: multiply;">
+            <footer>
+                <div class="social"><a href="https://github.com/king-shak" style="color: #ebeff1;"><i class="icon ion-social-github" style="color: #ebeff1;"></i></a><a href="https://gitlab.com/king-shak" style="color: #ebeff1;"><i class="fab fa-gitlab" style="color: #ebeff1;"></i></a><a href="https://www.linkedin.com/in/shakeel-khan-0a1278169/" style="color: #ebeff1;"><i class="fab fa-linkedin-in" style="color: #ebeff1;"></i></a><a href="mailto:skhan001@uw.edu" style="color: #ebeff1;"><i class="far fa-envelope" style="color: #ebeff1;"></i></a></div>
+                <ul class="list-inline">
+                    <li class="list-inline-item" style="color: #ebeff1;"><a href="index.html" style="font-family: ABeeZee, sans-serif;">About</a></li>
+                    <li class="list-inline-item"><a href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Skills</a></li>
+                    <li class="list-inline-item"><a href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Experience</a></li>
+                    <li class="list-inline-item"><a href="projects.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Projects</a></li>
+                </ul>
+                <p class="copyright" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Made with BootStrap Studio and hosted with GitHub Pages&nbsp;<a href="#">here</a></p>
+            </footer>
+        </div>
     </div>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
