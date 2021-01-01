@@ -33,7 +33,7 @@
                     </div>
                 </nav>
             </header>
-            <main style="height: 113rem;">
+            <main style="height: 147rem;">
                 <section>
                     <div class="container">
                         <div class="row" style="padding-top: 2rem;">
@@ -42,7 +42,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col d-xl-flex justify-content-xl-start align-items-xl-center"><img src="assets/img/automated%20hatch%20placement.gif"></div>
+                            <div class="col d-xl-flex justify-content-xl-start align-items-xl-center" style="padding-bottom: 0.5rem;"><img src="assets/img/automated%20hatch%20placement.gif" style="height: 29rem;border-radius: 0.5rem;"></div>
                         </div>
                         <div class="row">
                             <div class="col">
@@ -51,7 +51,7 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <p style="color: #ebeff1;">This was done for the 2019 FRC game Deep Space, and part of the game involved placing these circular acrylic panels called "hatch panels" onto a certain element of the field called the "cargo ship" to patch the holes in the ship. We knew from the beginning we wanted to automate the process of lining up with the cargo ship and placing the hatch panel, as the tolerances for this were very tight (you basically had to place them straight on).<br></p>
+                                <p style="color: #ebeff1;">This was done for the 2019 FRC game Deep Space, where part of the game involved placing these circular acrylic panels called "hatch panels" onto a certain element of the field called the "cargo ship", to patch the holes in the ship. We knew from the beginning we wanted to automate the process of lining up with the cargo ship and placing the hatch panel, as the tolerances for this were very tight (you basically had to place them straight on).<br></p>
                             </div>
                         </div>
                         <div class="row">
@@ -61,7 +61,7 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <p style="color: #ebeff1;">It uses a Limelight to find the cargo ship and determine both how far away we are from it and our orientation in relation to it. A Limelight is an all-in-one computer vision platform that has a camera and a small computer on board that runs the computer vision pipelines. The pipelines are the bit of software that take the raw images from the camera and processes them to extract the information about the target.<br>Once we know how far away we are from the target (the spot to place the hatch panel on the cargo ship) and our orientation in relation to it, we use our motion profiling software to define a path for the robot to follow autonomously to the target. Motion profiling is an controls algorithm that defines the movement of the robot as a series of steps. Each step defines the velocity, acceleration, and orientation of the robot at a certain time point. These steps are then combined to make our path (which is simple a sequence of steps).<br>As we approach the target, we automatically extend our hatch placing mechanism, and once me make contact we retract it, securing the hatch panel in place.<br></p>
+                                <p style="color: #ebeff1;">It uses a&nbsp;<a href="https://limelightvision.io/">Limelight</a>&nbsp;to find the cargo ship and determine both how far away we are from it and our orientation in relation to it. A Limelight is an all-in-one computer vision platform that runs the computer vision pipelines we used. The pipelines are the bit of software that take the raw images from the camera and processes them to extract the information about the target.<br><br>Once we know how far away we are from the target (the spot to place the hatch panel on the cargo ship) and our orientation with respect to it, we can use our motion profiling software to define a path for the robot to autonomously follow to the target. Motion profiling is a controls algorithm that defines the movement of the robot as a series of steps, where each step defines the velocity, acceleration, and orientation of the robot at a certain time point. These steps are combined to make the path which our robot then follows.<br><br>As we approach the target, we automatically extend our hatch placing mechanism, retracting it upon contact, securing the hatch panel in place. Not only was this very reliable, it was also very useful as it allowed us to score game pieces, and thus points, much quicker than our opponents.<br></p>
                             </div>
                         </div>
                         <div class="row">
@@ -71,7 +71,15 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <p style="color: #ebeff1;">An interesting challenge we had was that the robot would go towards the cargo ship at an angle, which meant the hatch panel would get kind of awkwardly stuck in the cargo ship. It was also going rather fast even towards the end of the path (right up along the cargo ship), which meant it was crashing into the cargo ship.<br>Essentially, the robot was generating paths to follow that went too far forward (which causes the crashing into the cargo ship) because between the time the robot decided to calculate a path and actually had one, it had already moved forwards a significant amount, essentially offsetting the path it generates - this is called a lack of latency compensation. To fix this, the robot would detect if it were within a certain distance from the cargo ship, where it would then manually shorten the path to avoid crashing into the cargo ship.<br></p>
+                                <p style="color: #ebeff1;">An interesting challenge we had was that if we told the robot to automatically place the hatch panel while it was moving, it would go towards the cargo ship at an angle, which meant the hatch panel would end up getting stuck in the cargo ship. It was also going rather fast towards the end of the path (when it should be slowing down to place the hatch panel), causing it to crash into the cargo ship.<br><br>The issue here is because the robot was already in motion when it started to vision target and calculate a path, so in the time it took to obtain a path to follow it had moved a little bit, essentially offsetting the path that was generated, as shown below:<br></p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col" style="padding-bottom: 0.5rem;"><img src="assets/img/illustration%20of%20latency%20compensation%20issue%202019.png" style="height: 30rem;border-radius: 0.5rem;"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <p style="color: #ebeff1;">This is simply a lack of latency compensation, where the latency is the time it takes to find the target and calculate a path to it. To fix this, the robot would detect if it were within 2 feet from the cargo ship, where it would then manually shorten the path, eliminating the offset, to avoid crashing into the cargo ship. This is was one of the key things I worked on, and it ended up working quite well in competition.<br></p>
                             </div>
                         </div>
                         <div class="row">
@@ -81,7 +89,7 @@
                         </div>
                         <div class="row">
                             <div class="col">
-                                <p style="color: #ebeff1;">The most valuable learning experience from this was fixing the latency compensation issue. Although I had heard of latency compensation I had never seen it myself, let alone had to fix it. Learning about this issue and the approaches to solving it was very interesting.<br></p>
+                                <p style="color: #ebeff1;">Fixing the latency compensation issue was a valuable learning experience for me. Although I had heard of latency compensation, I had never seen it myself, let alone had to fix it. Learning about this issue and the approaches to solving it was very interesting.<br><br>Additionally, I got to learn a lot about computer vision that year. Originally, I tried using a Limelight and writing our own code to perform Pose Estimation on the target. However, despite the CV bit working quite well, there were other components that didn't quite work forcing us to drop Pose Estimation and come up with another solution.<br></p>
                             </div>
                         </div>
                         <div class="row">
@@ -90,7 +98,9 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col"><a class="btn btn-primary" role="button" data-bs-hover-animate="pulse" style="background: rgba(255,255,255,0);border-style: none;" href="https://github.com/FRCTeam2910/2019CompetitionRobot">See the code here →<br></a></div>
+                            <div class="col">
+                                <p style="color: #ebeff1;"><a href="https://github.com/FRCTeam2910/2019CompetitionRobot-Public/blob/master/src/main/java/org/frcteam2910/c2019/commands/ImprovedVisionPlaceCommand.java">Here</a>&nbsp;is the file I worked on improving the hatch placement command. Additionally,&nbsp;<a href="https://github.com/king-shak/PoseEstimation">here</a>&nbsp;is a repository containing the Pose Estimation code I wrote.<br></p>
+                            </div>
                         </div>
                     </div>
                 </section>
