@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Shakeel Khan</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abhaya+Libre">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Adamina">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alata">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aleo">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="assets/css/Header-Blue.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body style="background: rgb(23,25,35);">
+    <div id="holder" style="min-height: 100%;position: relative;">
+        <header style="background: url(&quot;assets/img/32b877ed4aa7778cc7d43ebb7d95a6f1.png&quot;) center / cover no-repeat;">
+            <nav class="navbar navbar-light navbar-expand-md navigation-clean" style="background: #212529c5;">
+                <div class="container"><a class="navbar-brand" href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Home</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navcol-1">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item"><a class="nav-link active" href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">About</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Skills</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Experience</a></li>
+                            <li class="nav-item"><a class="nav-link" href="projects.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Projects</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div id="body" style="padding-bottom: 12rem;">
+            <section>
+                <div class="container">
+                    <div class="row" style="padding-top: 2rem;">
+                        <div class="col">
+                            <h1 style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Custom FRC Pipelines</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col d-xl-flex justify-content-xl-start align-items-xl-center" style="padding-bottom: 0.5rem;"><img src="assets/img/custom%20pipeline%20with%20kmeans.gif" style="border-radius: 0.5rem;width: 80%;"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h2 style="color: #ebeff1;">Inspiration</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;">Majority of my work in my last 2 years on my FRC team involved computer vision. CV and its applications to robotics have always been very interesting to me. However, most of what ended up on our robot used a system called the&nbsp;<a href="https://limelightvision.io/">Limelight</a>. It's an all-in-one computer vision platform with a camera and small computer on board that runs the computer vision pipelines.<br><br>The Limelight was very nice, but it was expensive, and would sometimes randomly crash for no apparent reason. So, out of the desire to learn more about CV I set out to build my own alternative to the Limelight. While it never ended up being used on one of the robots, it worked rather well and I learned many new things working on it.<br></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h2 style="color: #ebeff1;">How the Pipeline Works</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;">A pipeline is a sequence of distinct steps to process and analyze image data. It can be used to find how far away we are from an object or our orientation with respect to it. Here is an overview of how we go from an image to finding how far away we are from say, a goal marked with retroreflective tape.<br></p>
+                        </div>
+                    </div>
+                    <div class="row flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row" style="padding-bottom: 1rem;">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col">
+                                    <h3 style="color: #ebeff1;">1) Capturing the Image</h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p class="d-sm-flex" style="color: #ebeff1;">The first step is capturing a frame. We only care about the target (the retroreflective tape) within the frame, so we want to capture the frame in way that makes it stand out. To do this, we shine the target with a bright light, adjust the white balance to make it really stand out, and we bring the camera ISO and shutter speed down, removing (nearly) all unwanted pixels.<br></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex justify-content-center align-items-center justify-content-sm-center align-items-sm-center justify-content-md-center align-items-md-center justify-content-lg-center align-items-lg-center justify-content-xl-center align-items-xl-center"><img src="assets/img/raw%20frame.jpg" style="border-radius: 0.5rem;width: 90%;"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h3 style="color: #ebeff1;">2) Thresholding</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;">While we got rid of a most of the unwanted pixels, there are still some left over, which we can get rid of using thresholding. To do this, we convert the image into the HSV (Hue, Saturation, and Value) color space. Hue is "pure color", Saturation is how saturated the pure color is, and Value is the amount of black in a color (see the color cylinder below). We simply specify the ranges of Hue, Saturation and Value we want thresholding to keep. The result is a monospace image, where every pixel is either 1 (white) or 0 (black).<br></p>
+                        </div>
+                    </div>
+                    <div class="row d-sm-flex justify-content-sm-center align-items-sm-center" style="padding-bottom: 1rem;">
+                        <div class="col d-flex d-md-flex d-xl-flex justify-content-center align-items-center justify-content-md-center align-items-md-center justify-content-xl-center align-items-xl-center" style="padding-bottom: 0.5rem;"><img src="assets/img/threshold.png" style="border-radius: 0.5rem;width: 90%;"></div>
+                    </div>
+                    <div class="row flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row" style="padding-bottom: 1rem;">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col">
+                                    <h3 style="color: #ebeff1;">3)&nbsp;Contour Detection</h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p style="color: #ebeff1;">Next we can begin to look for objects - otherwise known as contours within the image. For each contour we calculate a few properties: The contour boundary (pink), the contour midpoint (dark green), the contour reference vector (green), the contour vertices (red), the contour area, the contours' Oriented Bounding Box or OBB (blue), and lastly the contours' Axis-Aligned Bounding Box or AABB (yellow).<br></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-flex d-sm-flex d-xl-flex justify-content-center align-items-center justify-content-sm-center align-items-sm-center justify-content-xl-center align-items-xl-center"><img src="assets/img/contour%20detection.png" style="border-radius: 1rem;width: 50%;"></div>
+                    </div>
+                    <div class="row flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row" style="padding-bottom: 1rem;">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col">
+                                    <h3 style="color: #ebeff1;">4)&nbsp;Contour Filtering</h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p style="color: #ebeff1;">Contour detection isn't a "smart" process, as in it won't pick up exactly what you want and only that - it will pick up any object of any shape and size. So, we can filter through the contours we found to get exactly what we want. We can filter by the contour area, fullness, which is the contour area divided by the area of the OBB, and lastly the aspect ratio of the AABB.<br><br>We then sort our filtered contours, either from left to right, right to left, top to bottom or bottom to top.<br></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-flex d-sm-flex d-md-flex d-xl-flex justify-content-center align-items-center justify-content-sm-center align-items-sm-center justify-content-md-center align-items-md-center justify-content-xl-center align-items-xl-center"><img src="assets/img/contour%20filtering.png" style="border-radius: 1rem;width: 55%;"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h3 style="color: #ebeff1;">5) Contour Pairing</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;">Sometimes, a target may consist of multiple contours, as is shown in the image below. In this case, we can perform contour pairing. The pairs are created from our list of filtered and sorted contours. Multiple pairs can be created, and we can filter and sort our pairs just as we did with the individual contours. We can also specify an intersection location for the contours - basically, if you were to draw a line through each contour, parallel to the reference vector, they would either intersect above, below, to the right or to the left of the contours, and we can specify this.<br></p>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-bottom: 1rem;">
+                        <div class="col d-xl-flex justify-content-xl-center align-items-xl-center" style="padding-bottom: 0.5rem;"><img src="assets/img/contour%20pairing.png" style="border-radius: 0.5rem;width: 100%;"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h3 style="color: #ebeff1;">6)&nbsp;Choosing the Target</h3>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-bottom: 1rem;">
+                        <div class="col">
+                            <p style="color: #ebeff1;">Now we choose our target. If we did not perform contour pairing, we chose the first contour in the list of filtered and sorted contours. Else, we choose the first contour pair in the list of filtered and sorted contour pairs. Whichever case, we now theoretically have the target closest to what the pipeline specifies, and we can now perform Pose Estimation.<br></p>
+                        </div>
+                    </div>
+                    <div class="row flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row" style="padding-bottom: 1rem;">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col">
+                                    <h3 style="color: #ebeff1;">7)&nbsp;Performing Pose Estimation</h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col">
+                                    <p style="color: #ebeff1;">Pose Estimation is a process where we obtain the position and orientation of a 3D object from a 2D image, with respect to the camera sensor. This can be done with a simple OpenCV call, which takes a Camera Matrix, containing the intrinsic and extrinsic properties of the camera; the distortion coefficients of the camera; the objects points, or the location of the points of interest of the target in the real world; and the image points, which are the locations of the points of interest within the frame in pixel space.<br><br>We can then use this data to align ourselves with the target, or drive straight up to it, performing complex tasks and maneuvers that would originally have to have been manually by the driver in a matter of seconds.<br><br>The image to the right shows a targets image points marked in red, with its corresponding object points shown above (measured in inches).</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col d-flex d-xl-flex justify-content-center align-items-center justify-content-xl-center align-items-xl-center"><img src="assets/img/pnp.png" style="border-radius: 1rem;width: 75%;"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h2 style="color: #ebeff1;">Using Double Buffering to Improve Performance</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;">Now we have our pipeline, but how do we run it? At first you may just implement an infinite loop, where you grab a frame, run it through the pipeline, and repeat. There is an inherent issue with this, however. Say you want to run the pipeline at 90 FPS, which means we must spend no more than about 11 ms (milliseconds) processing each frame. Let's also say the pipeline takes 11 ms to run.<br><br>The camera will be running at 90 FPS so you can have a new frame every 11 ms. The issue here is, the process of capturing a frame isn't instantaneous - it takes time, which in this scenario is 11 ms. So, our current approach would take 22 ms to process each frame (halving the desired FPS), because we're spending half of the time sitting around, waiting for the frame to come. Here's a visual explaining the issue:<br></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col d-xl-flex align-items-xl-center"><img src="assets/img/original%20approach.png" style="border-radius: 0.5rem;width: 90%;"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;padding-top: 0.5rem;">This can be solved using <em>double buffering</em>. There is a good explanation&nbsp;<a href="https://en.wikipedia.org/wiki/Multiple_buffering#Description">here</a>&nbsp;on how it works conceptually. To implement this, we'll have two threads - a capture thread and a processing thread. The former has two buffers, and all it does it wait for a frame, store it in one of the buffers, swap the pointers to the buffers, wait for the next frame, and repeats the whole process. The latter, rather than waiting for a frame will simply grab the last one from the capture thread - so we are no longer waiting around for a frame. This is depicted in the image below:<br></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col d-xl-flex align-items-xl-center"><img src="assets/img/improved%20approach.png" style="border-radius: 0.5rem;width: 100%;"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;padding-top: 0.5rem;">Similar to our original approach, the data when processed will still be 22 ms old, however, we have doubled our FPS, giving us double the data in the same amount of time.<br></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h2 style="color: #ebeff1;">The Hardware</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;">As this was going to be on our robot, it needed some compact platform to run off of. I decided to use a Raspberry Pi, with a Raspberry Pi Camera and a some bright green LED's to make the targets easier to see. I decided to go with the Pi simply because it was cheap, compact, and still packing some good performance. I chose the Pi Camera because it was much more compact then a USB webcam, and it connects to the Pi via a CSI interface, which has much more bandwidth than USB.<br><br>This the first revision of the hardware, with the Pi, Pi Cam, an LED ring light, a VRM to help supply power to everything, and a 3D printed plate to hold it all together.<br></p>
+                        </div>
+                    </div>
+                    <div class="row flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row">
+                        <div class="col d-flex d-xl-flex justify-content-center align-items-center justify-content-xl-center align-items-xl-center"><img src="assets/img/v1%20front.jpg" style="border-radius: 1rem;max-width: 60%;padding: 0.5rem;"></div>
+                        <div class="col d-flex d-xl-flex justify-content-center align-items-center justify-content-xl-center align-items-xl-center"><img src="assets/img/v1%20back.jpg" style="border-radius: 1rem;width: 70%;padding: 0.5rem;"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;padding-top: 0.5rem;">This was alright in the beginning, but it had its drawbacks. It was difficult to handle, the LED's weren't nearly as bright as they needed to be, and we still needed some more compute power. Enter the V2:<br></p>
+                        </div>
+                    </div>
+                    <div class="row flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row">
+                        <div class="col d-xl-flex justify-content-xl-center align-items-xl-center"><img src="assets/img/IMG_20201231_175948.jpg" style="border-radius: 1rem;width: 98%;padding: 0.5rem;"></div>
+                        <div class="col d-xl-flex justify-content-xl-center align-items-xl-center"><img src="assets/img/IMG_20201231_180056.jpg" style="border-radius: 1rem;width: 98%;padding: 0.5rem;"></div>
+                    </div>
+                    <div class="row flex-column flex-sm-column flex-md-row flex-lg-row flex-xl-row">
+                        <div class="col d-xl-flex justify-content-xl-center align-items-xl-center"><img src="assets/img/IMG_20210206_143554.jpg" style="border-radius: 1rem;width: 98%;padding: 0.5rem;"></div>
+                        <div class="col d-xl-flex justify-content-xl-center align-items-xl-center"><img src="assets/img/IMG_20210206_143618.jpg" style="border-radius: 1rem;width: 98%;padding: 0.5rem;"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;padding-top: 0.5rem;">This used an overclocked Raspberry Pi 4, which was significantly faster than the Pi 2, had 6 high-power LED's that shone 600 lumens bright, a lens mount for the camera, and a proper case to hold it all together. It finally provided for an easy way to handle the hardware and met all the requirements we needed, compute and otherwise.<br></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h2 style="color: #ebeff1;">Challenges</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;"><em>A lot</em>. One of the biggest issues was performance. This needed to run on a compact platform so I couldn't just throw bigger, more powerful hardware at it. This forced me to be diligent about the code I wrote, making sure it was as efficient as I could make it. I also learned how to profile my code and log events so I could analyze which parts were the most computationally expensive.<br><br>Another thing was the hardware. I'm a programmer first, so learning to CAD and doing the electrical work was definitely a (fun) challenge for me. Particularly because this demanded a lot in a very small form factor, so as I was trying to figure out how to fit these individual components together, I also had to consider power delivery and cooling.<br></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h2 style="color: #ebeff1;">What I Learned</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;"><em>A lot</em>. I learned about web servers, WebSockets, threading (how threading on Python is different from other programming languages), multiprocessing, inter-process communication (IPC) via pipes, queues, stacks, and sockets, double buffering, a lot of OpenCV, how to profile my code, and how to write efficient code. I also learned a bit of SolidWorks, some new things about electronics, and how to use tools like multimeters and calipers.<br><br>Something else I learned was how to design and implement a system as intricate as this was. Most of my time was spent doing research and planning. For example, when I needed to parallelize the software for better performance, I researched how multiprocessing works, the different methods of IPC and when each should be used. From there I would plan out by hand on paper what I needed to implement. For example, how many threads/processes I'd need, what each thread/process was responsible for, the lines of communication between them and what they were communicating to each other. This in-depth research and planning was crucial as it lead to a better design and it made implementation much smoother. This process also served as a form of documentation for my project, which made future modifications/additions easier to perform.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h2 style="color: #ebeff1;">See the Code</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;"><a href="https://github.com/king-shak/VisionDev/blob/master/visiondev/pipelines/FRCPipelineBenchmark.py">Here</a>&nbsp;is the code for the pipeline described above. The repository that file belongs to contains a lot of the stuff I've done with CV. If you want to see the code specifically for this project, please contact me <a href="mailto:skhan001@uw.edu">here</a>.<br></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="d-flex d-xl-flex justify-content-center align-items-center justify-content-xl-center align-items-xl-center footer-basic" style="background: url(&quot;assets/img/32b877ed4aa7778cc7d43ebb7d95a6f1.png&quot;) center / cover no-repeat, #212529c5;background-blend-mode: multiply;height: 12rem;width: 100%;position: absolute;left: 0;bottom: 0;">
+            <footer>
+                <div class="d-xl-flex justify-content-xl-center align-items-xl-center social"><a class="d-xl-flex justify-content-xl-center align-items-xl-center" href="https://github.com/king-shak" style="color: #ebeff1;"><i class="icon ion-social-github" style="color: #ebeff1;"></i></a><a class="d-xl-flex justify-content-xl-center align-items-xl-center" href="https://gitlab.com/king-shak" style="color: #ebeff1;"><i class="fab fa-gitlab" style="color: #ebeff1;"></i></a><a class="d-xl-flex justify-content-xl-center align-items-xl-center" href="https://www.linkedin.com/in/shakeel-khan-seattle/" style="color: #ebeff1;"><i class="fab fa-linkedin-in" style="color: #ebeff1;"></i></a><a class="d-xl-flex justify-content-xl-center align-items-xl-center" href="mailto:skhan001@uw.edu" style="color: #ebeff1;"><i class="far fa-envelope" style="color: #ebeff1;"></i></a><a class="d-xl-flex justify-content-xl-center align-items-xl-center" href="/assets/Resume.pdf" style="color: #ebeff1;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="color: #ebeff1;">
+                            <path d="M7 18H17V16H7V18Z" fill="currentColor"></path>
+                            <path d="M17 14H7V12H17V14Z" fill="currentColor"></path>
+                            <path d="M7 10H11V8H7V10Z" fill="currentColor"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6 2C4.34315 2 3 3.34315 3 5V19C3 20.6569 4.34315 22 6 22H18C19.6569 22 21 20.6569 21 19V9C21 5.13401 17.866 2 14 2H6ZM6 4H13V9H19V19C19 19.5523 18.5523 20 18 20H6C5.44772 20 5 19.5523 5 19V5C5 4.44772 5.44772 4 6 4ZM15 4.10002C16.6113 4.4271 17.9413 5.52906 18.584 7H15V4.10002Z" fill="currentColor"></path>
+                        </svg></a></div>
+                <ul class="list-inline">
+                    <li class="list-inline-item" style="color: #ebeff1;"><a href="index.html" style="font-family: ABeeZee, sans-serif;">About</a></li>
+                    <li class="list-inline-item"><a href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Skills</a></li>
+                    <li class="list-inline-item"><a href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Experience</a></li>
+                    <li class="list-inline-item"><a href="projects.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Projects</a></li>
+                </ul>
+                <p class="copyright" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Made with BootStrap Studio</p>
+            </footer>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+</body>
+
+</html>

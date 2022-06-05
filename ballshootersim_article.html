@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Shakeel Khan</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abhaya+Libre">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Adamina">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alata">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aleo">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="assets/css/Header-Blue.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body style="background: rgb(23,25,35);">
+    <div id="holder" style="min-height: 100%;position: relative;">
+        <header style="background: url(&quot;assets/img/32b877ed4aa7778cc7d43ebb7d95a6f1.png&quot;) center / cover no-repeat;">
+            <nav class="navbar navbar-light navbar-expand-md navigation-clean" style="background: #212529c5;">
+                <div class="container"><a class="navbar-brand" href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Home</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navcol-1">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item"><a class="nav-link active" href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">About</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Skills</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Experience</a></li>
+                            <li class="nav-item"><a class="nav-link" href="projects.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Projects</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div id="body" style="padding-bottom: 12rem;">
+            <section>
+                <div class="container">
+                    <div class="row" style="padding-top: 2rem;">
+                        <div class="col">
+                            <h1 style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Automated Ball Shooter Simulator</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col d-xl-flex justify-content-xl-start align-items-xl-center" style="padding-bottom: 0.5rem;"><img src="assets/img/best_initials.jpg" style="border-radius: 0.5rem;width: 100%;"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h2 style="color: #ebeff1;">Inspiration</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;"><a href="2020frc_article.html">Here</a>&nbsp;is an article describing the automated ball shooter I worked on for my high school robotics team in 2020. From reading that you would know that it works by using a computer vision pipeline to find the target, calculate the distance between the robot and it, configure the shooting mechanism for it, and line the robot up.<br><br>But you may be wondering, how did we determine the correct flywheel RPM and hood angle for each distance? Originally, we were expecting to do some trial-and-error with the robot to get these values. However, the mechanical team ended up being a week behind schedule, and playing Counter Strike Source got rather boring, so we decided to make a Jupyter notebook that could simulate the physics of the ball being shot at various combinations of RPM and hood angles, choosing the best configuration for several distances from the target in 1-foot increments (4-24 feet).<br></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h2 style="color: #ebeff1;">How it Works</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;">The simulation took a brute-force approach by going through and trying every possible combination of flywheel RPM and hood angle. For every combination, we were trying to minimize the vertical velocity of the ball as it goes through the center of the goal. For those of you familiar with projectile motion, this basically means we are trying to find the combination of flywheel RPM and hood angle such that the apex of the ball's trajectory ends up right in the center of the goal, as depicted in the image to the left below (the blue curve is the ball's trajectory, the small green vertical line is the entry of the goal):<br></p>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-bottom: 0.5rem;">
+                        <div class="col d-flex d-xl-flex justify-content-center align-items-center justify-content-xl-center align-items-xl-center"><img src="assets/img/trajectory.png" style="width: 80%;border-radius: 0.5rem;"></div>
+                        <div class="col d-flex d-xl-flex justify-content-center align-items-center justify-content-xl-center align-items-xl-center"><img src="assets/img/best%20initial.png" style="width: 80%;border-radius: 0.5rem;"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;">We also, for each distance, create a colormap as shown in the image to the right above. The horizontal axis is all of the possible hood angles, the vertical axis is the flywheel RPM. Then, to the right of the graph is a bar titled "Ball Y Velocity" (or the ball's vertical velocity) - this tells us how to interpret the colors in the actual colormap. So, yellow means the ball's vertical velocity going through goal was about 0 meters per second (m/s), and purple means the vertical velocity going through the goal was 30 m/s.<br><br>As you may have noticed, towards the bottom it tells us the best values. So you may ask, what is the purpose of the graph? The answer to which is that we can see how all the other combinations of flywheel RPM and hood position worked out, but also, they just look cool 😎.<br><br>My primary role was creating these visualizations to help us understand the data the simulation was giving.<br></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h2 style="color: #ebeff1;">Challenges</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;">The biggest challenge was working out the physics of the ball. This took a lot of research (and a lot of interesting papers from NASA) to work out, but it was a fun learning process as we worked out the math on a whiteboard together. In the end, the predictions made by the simulator were actually pretty good, and only needed minor adjustment.<br></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h2 style="color: #ebeff1;">What I Learned</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;">It was interesting to learn about "real world" projectile motion, where you need to account for things like drag coefficient of the projectile, its angular velocity, the density of the air, and the magnus effect on projectiles. It's a fun experience to apply things you've learned in the classroom to solve real problems.<br></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h2 style="color: #ebeff1;">See the Code</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;"><a href="https://github.com/king-shak/ShooterSim/blob/master/src/Shooter%20Model.ipynb">Here</a>&nbsp;is the Jupyter notebook I worked on.<br></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="d-flex d-xl-flex justify-content-center align-items-center justify-content-xl-center align-items-xl-center footer-basic" style="background: url(&quot;assets/img/32b877ed4aa7778cc7d43ebb7d95a6f1.png&quot;) center / cover no-repeat, #212529c5;background-blend-mode: multiply;height: 12rem;width: 100%;position: absolute;left: 0;bottom: 0;">
+            <footer>
+                <div class="d-xl-flex justify-content-xl-center align-items-xl-center social"><a class="d-xl-flex justify-content-xl-center align-items-xl-center" href="https://github.com/king-shak" style="color: #ebeff1;"><i class="icon ion-social-github" style="color: #ebeff1;"></i></a><a class="d-xl-flex justify-content-xl-center align-items-xl-center" href="https://gitlab.com/king-shak" style="color: #ebeff1;"><i class="fab fa-gitlab" style="color: #ebeff1;"></i></a><a class="d-xl-flex justify-content-xl-center align-items-xl-center" href="https://www.linkedin.com/in/shakeel-khan-seattle/" style="color: #ebeff1;"><i class="fab fa-linkedin-in" style="color: #ebeff1;"></i></a><a class="d-xl-flex justify-content-xl-center align-items-xl-center" href="mailto:skhan001@uw.edu" style="color: #ebeff1;"><i class="far fa-envelope" style="color: #ebeff1;"></i></a><a class="d-xl-flex justify-content-xl-center align-items-xl-center" href="/assets/Resume.pdf" style="color: #ebeff1;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="color: #ebeff1;">
+                            <path d="M7 18H17V16H7V18Z" fill="currentColor"></path>
+                            <path d="M17 14H7V12H17V14Z" fill="currentColor"></path>
+                            <path d="M7 10H11V8H7V10Z" fill="currentColor"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6 2C4.34315 2 3 3.34315 3 5V19C3 20.6569 4.34315 22 6 22H18C19.6569 22 21 20.6569 21 19V9C21 5.13401 17.866 2 14 2H6ZM6 4H13V9H19V19C19 19.5523 18.5523 20 18 20H6C5.44772 20 5 19.5523 5 19V5C5 4.44772 5.44772 4 6 4ZM15 4.10002C16.6113 4.4271 17.9413 5.52906 18.584 7H15V4.10002Z" fill="currentColor"></path>
+                        </svg></a></div>
+                <ul class="list-inline">
+                    <li class="list-inline-item" style="color: #ebeff1;"><a href="index.html" style="font-family: ABeeZee, sans-serif;">About</a></li>
+                    <li class="list-inline-item"><a href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Skills</a></li>
+                    <li class="list-inline-item"><a href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Experience</a></li>
+                    <li class="list-inline-item"><a href="projects.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Projects</a></li>
+                </ul>
+                <p class="copyright" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Made with BootStrap Studio</p>
+            </footer>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+</body>
+
+</html>

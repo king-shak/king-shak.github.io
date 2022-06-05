@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Shakeel Khan</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abhaya+Libre">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Adamina">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alata">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aleo">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="assets/css/Header-Blue.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body style="background: rgb(23,25,35);">
+    <div id="holder" style="min-height: 100%;position: relative;">
+        <header style="background: url(&quot;assets/img/32b877ed4aa7778cc7d43ebb7d95a6f1.png&quot;) center / cover no-repeat;">
+            <nav class="navbar navbar-light navbar-expand-md navigation-clean" style="background: #212529c5;">
+                <div class="container"><a class="navbar-brand" href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Home</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navcol-1">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item"><a class="nav-link active" href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">About</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Skills</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Experience</a></li>
+                            <li class="nav-item"><a class="nav-link" href="projects.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Projects</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div id="body" style="padding-bottom: 12rem;">
+            <section>
+                <div class="container" style="height: 100%;">
+                    <div class="row" style="padding-top: 2rem;">
+                        <div class="col">
+                            <h1 style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Galaxy Busters</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col d-xl-flex justify-content-xl-start align-items-xl-center" style="padding-bottom: 0.5rem;"><img style="border-radius: 0.5rem;width: 85%;" src="assets/img/game-thumbnail.png"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h2 style="color: #ebeff1;">Inspiration</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;">Galaxy Busters is a bullet hell (like the <em>Touhou Project</em>) space shooter, where the player character is a spaceship at the bottom of the screen shooting at enemy spaceships which either come from the top or sides of the playable area. The player can collect items to become stronger.<br><br>This was done for a game development course as my final (team) project. In the first five weeks we learned about the game engine we would be using, Unity. In the following five weeks we would brainstorm, design, prototype, and build our game. To keep us on pace there was a prototype demo along with alpha and beta playtests. The final playtest came the week after where we were expected to deliver a full, fun, bug-free game.<br></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h2 style="color: #ebeff1;">GamePlay</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;">Players progress across 5 levels where enemies get progressively stronger. To combat this, they'll receive special items at the end of each level that increase their stats or give them special abilities. In the final level, the players will face a boss that tests their skill and item collection. Players will have to develop a good understanding of the patterns in each level and also lighly test their luck in order to get the highest score in the game.<br></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h2 style="color: #ebeff1;">My Contributions</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;">I worked on several aspects of the game, such as the menus and refining certain bits of the UI, but my main contributions were to the implementation of the player characters and the inventory system.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h3 style="color: #ebeff1;">Component-Based Architecture for Player Characters</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;">In Unity, everything (cameras, buttons in the UI, NPCs, player characters, etc.) are represented by <em>GameObjects</em>. <em>GameObjects</em>&nbsp;are composed of several <em>Components</em>, which collectively define the behavior for that <em>GameObject</em>. For example, for a player character, you could have a</p>
+                            <ul style="color: #ebeff1;">
+                                <li>A <em>Transform</em>&nbsp;component to represent the <em>GameObject</em>'s position and orientation.</li>
+                                <li>A <em>Sprite Renderer</em> to display the character's sprite.</li>
+                                <li>An <em>Audio Player</em> if the character plays some noise.</li>
+                                <li>A <em>2D Collider</em> for handling collisions with other <em>GameObejct</em>s.</li>
+                                <li>etc...</li>
+                            </ul>
+                            <p style="color: #ebeff1;">The ones mentioned above are some of the many components that Unity comes with. You can create your own components by writing a script that can do almost anything. You can access the <em>Transform</em>&nbsp;component to move the character, you can change the sprite through the <em>Sprite Renderer</em>&nbsp;and you can create event handlers for when a collision occurs, etc. For the characters in our game, I needed to code the following:</p>
+                            <ul style="color: #ebeff1;">
+                                <li>Movement for the characters.</li>
+                                <li>Event handlers for collisions (running into an enemy, getting hit by a bullet).</li>
+                                <li>The weapon for the character.</li>
+                                <li>The basic and ultimate abilities for the character (e.g., spraying bullets in a cone, a shield, etc.).</li>
+                            </ul>
+                            <p style="color: #ebeff1;">This all could be done in one script as a single <em>Component</em>, but this isn't ideal for some reasons. One of them is that the script would be <em>massive</em>&nbsp;as it's incorporating all the character's behaviors, making it more difficult to maintain. Also, the game has 3 different playable characters, some of which behave the same, while others behave differently. For example, the code for the movement and weapon was the same for all of them. Creating 3 different scripts, one for each character, with the same code for these parts isn't ideal because if you encounter a bug, you need to fix it in 3 places.<br><br>So, I decided to split these parts into their own components - movement, colliders, basic and ultimate abilities, and the weapon. I also put a parent component containing references to all the children. If a child needs to communicate with one of its siblings, it must obtain a reference to them through the parent first.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col d-flex d-sm-flex justify-content-start align-items-center justify-content-sm-start justify-content-md-start justify-content-lg-start justify-content-xl-start"><img src="assets/img/parent-child.png" style="width: 95%;"></div>
+                    </div>
+                    <div class="row" style="padding-top: 1rem;">
+                        <div class="col">
+                            <p style="color: #ebeff1;">This approach was nice because as mentioned before, the code for the movement and weapon are the same across all three characters. This allows us to create one script defining these behaviors, encouraging reusability and improving maintainability.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h3 style="color: #ebeff1;">Inventory System</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;">Another of my contributions is the inventory system. As I mentioned before, at the end of each level players can choose a new item that could boost their stats or grant them some special ability. I needed to make an inventory system that keeps track of these items and performs the necessary upgrades to the player character. I also needed to find a way to represent the items themselves.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h4 style="color: #ebeff1;">Representing Items</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;">To represent items, I used a feature of Unity called <em>ScriptableObject</em>s. In a nutshell they're data containers that can be used to save large amounts of data. Here, I used them to represent my items. They had a few pieces of data that would collectively form a unique ID that could be used to tell what type of item it was and what sort of upgrade to perform (be it a simple stat change or modifying the behavior of the weapon, for example).</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h4 style="color: #ebeff1;">The Inventory</h4>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;">Adding an item to the inventory was very straightforward. First we check if the item is valid, then, we can use the item ID to determine what upgrade it needs to make to the player. This was just a matter of going through a if/else if/else clause.<br><br>Some of the feedback I got from my peers when they were adding items was that working with this system was very easy. All they'd have to do is create the item, specifying a unique ID, and updating the if/else if/else clause in the inventory to account for the new item.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h2 style="color: #ebeff1;">Challenges</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;">Here are some of the challenges I faced.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h3 style="color: #ebeff1;">Merging Code</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;">One of my responsibilities was merging all our code (we used Git and GitHub). Git would always merge code files just fine. However, any of the special Unity files almost always caused merge conflicts. Usually, these files are binaries but you can set Unity to use text-serialization instead for VCS. Even then, when you made changes to these files, Unity would shift things around in a way that Git wasn't able to make sense of and resolve.<br><br>What I ended up doing for each conflict was keeping what was on the master branch, commit the merge, then enter the Unity Editor to fix the assets with conflicts and commit those fixes before I could finally merge. It was a strange issue, but this gave me more experience with manually resolving merge conflicts.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h3 style="color: #ebeff1;">Player Characters</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;">Another challenge I had was with the components for the player characters. As mentioned before, the player characters had a parent component and several child components that would collectively define the behavior for the player. Something I assumed when implementing this is that the parent component would be up before the children, but Unity doesn't guarantee anything in terms of the start-up order of components. This meant sometimes a child component would start up and expect the parent component to be up when it wasn't, causing several errors. The fix was relatively simple (having the children wait for the parent to be up), it just took time to determine the issue.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h3 style="color: #ebeff1;">Item Selection Screen</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;">One of the other things I worked on was the Item Selection Screen that was presented to the user at the end of each level. The main challenge here was determining what items to present to the user, keeping track of which items they already had.<br><br>What I did to solve this was create an <em>Item Catalog</em>&nbsp;to go along with my <em>Item Inventory</em>. The catalog kept track of all the items that weren't in the player's inventory, and had methods to retrieve a random set of items to be presented during item selection. So at the beginning of the game the catalog is full and the inventory is empty, and as the game progresses, the catalog loses items and the inventory grows.<br><br>One of the downsides to this approach is that the catalog loads <em>all</em>&nbsp;the items into memory, which wasn't a problem for our small set of items, but if we had a large set of items it could result in longer loading times for the game and more memory usage. A better approach would be to load in more items when the catalog runs low, rather than all at once.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h2 style="color: #ebeff1;">What I Learned</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;">Learning Unity was a fun experience. Similar to something like Git, it has a steep learning curve and in the end you develop a love-hate relationship with it.<br><br>This project was also a completely different experience than what I'm used to. Normally, for school assignments and most of my personal work I'm given a blank canvas: I can come up with my own design for the software with the only limitations being those of the language itself. In Unity, it's different. There are several systems such as the <em>GameObject</em> and <em>Component</em>&nbsp;that have their own constraints and force you to do things a certain way. This provided an interesting challenge that required more research and planning than usual.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h2 style="color: #ebeff1;">Play the Game!</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;">You can play the game <a href="https://king-shak.github.io/GalaxyBusters-WebGL/">here</a>, view the trailer <a href="https://www.youtube.com/watch?v=Z67nXnGnreQ">here</a>, and view the source code <a href="https://github.com/king-shak/GalaxyBusters">here</a>!</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="d-flex justify-content-center align-items-center footer-basic" style="background: url(&quot;assets/img/32b877ed4aa7778cc7d43ebb7d95a6f1.png&quot;) center / cover no-repeat, #212529c5;background-blend-mode: multiply;height: 12rem;width: 100%;position: absolute;left: 0;bottom: 0;">
+            <footer>
+                <div class="d-xl-flex justify-content-xl-center align-items-xl-center social"><a class="d-xl-flex justify-content-xl-center align-items-xl-center" href="https://github.com/king-shak" style="color: #ebeff1;"><i class="icon ion-social-github" style="color: #ebeff1;"></i></a><a class="d-xl-flex justify-content-xl-center align-items-xl-center" href="https://gitlab.com/king-shak" style="color: #ebeff1;"><i class="fab fa-gitlab" style="color: #ebeff1;"></i></a><a class="d-xl-flex justify-content-xl-center align-items-xl-center" href="https://www.linkedin.com/in/shakeel-khan-seattle/" style="color: #ebeff1;"><i class="fab fa-linkedin-in" style="color: #ebeff1;"></i></a><a class="d-xl-flex justify-content-xl-center align-items-xl-center" href="mailto:skhan001@uw.edu" style="color: #ebeff1;"><i class="far fa-envelope" style="color: #ebeff1;"></i></a><a class="d-xl-flex justify-content-xl-center align-items-xl-center" href="/assets/Resume.pdf" style="color: #ebeff1;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="color: #ebeff1;">
+                            <path d="M7 18H17V16H7V18Z" fill="currentColor"></path>
+                            <path d="M17 14H7V12H17V14Z" fill="currentColor"></path>
+                            <path d="M7 10H11V8H7V10Z" fill="currentColor"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6 2C4.34315 2 3 3.34315 3 5V19C3 20.6569 4.34315 22 6 22H18C19.6569 22 21 20.6569 21 19V9C21 5.13401 17.866 2 14 2H6ZM6 4H13V9H19V19C19 19.5523 18.5523 20 18 20H6C5.44772 20 5 19.5523 5 19V5C5 4.44772 5.44772 4 6 4ZM15 4.10002C16.6113 4.4271 17.9413 5.52906 18.584 7H15V4.10002Z" fill="currentColor"></path>
+                        </svg></a></div>
+                <ul class="list-inline">
+                    <li class="list-inline-item" style="color: #ebeff1;"><a href="index.html" style="font-family: ABeeZee, sans-serif;">About</a></li>
+                    <li class="list-inline-item"><a href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Skills</a></li>
+                    <li class="list-inline-item"><a href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Experience</a></li>
+                    <li class="list-inline-item"><a href="projects.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Projects</a></li>
+                </ul>
+                <p class="copyright" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Made with BootStrap Studio</p>
+            </footer>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+</body>
+
+</html>

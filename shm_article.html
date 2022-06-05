@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Shakeel Khan</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abhaya+Libre">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Adamina">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alata">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aleo">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="assets/css/Header-Blue.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body style="background: rgb(23,25,35);">
+    <div id="holder" style="min-height: 100%;position: relative;">
+        <header style="background: url(&quot;assets/img/32b877ed4aa7778cc7d43ebb7d95a6f1.png&quot;) center / cover no-repeat;">
+            <nav class="navbar navbar-light navbar-expand-md navigation-clean" style="background: #212529c5;">
+                <div class="container"><a class="navbar-brand" href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Home</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navcol-1">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item"><a class="nav-link active" href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">About</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Skills</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Experience</a></li>
+                            <li class="nav-item"><a class="nav-link" href="projects.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Projects</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div id="body" style="padding-bottom: 12rem;">
+            <section>
+                <div class="container" style="height: 100%;">
+                    <div class="row" style="padding-top: 2rem;">
+                        <div class="col">
+                            <h1 style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Sky-High Memes</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col d-xl-flex justify-content-xl-start align-items-xl-center" style="padding-bottom: 0.5rem;"><img style="border-radius: 0.5rem;width: 75%;" src="assets/img/shm%20landing%20page.png"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h2 style="color: #ebeff1;">Inspiration</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;">This project was done for my cloud computing class to get more experience working with cloud services. My team and I decided to make a website, Sky-High Memes, where you can create memes, build a portfolio for others to see, and subscribe to other meme creators. We chose this because we wanted something doable within the roughly 2-week timeframe we had (with other ongoing classes) that was fun and interesting.<br><br>We decided to use Amazon Web Services (AWS) to host our application using Elastic Beanstalk (EB). We also used some other AWS resources: an S3 bucket for storing memes (images), a CloudFront distribution for our S3 bucket (providing higher availability and performance for accessing memes), some DynamoDB NoSQL tables for storing user and meme information, AWS Simple Notification Service (SNS) for sending emails to subscribers when a new meme is created, and a AWS CodePipeline for continuous deployment (CD).<br><br>The application itself was written in Python, using the Flask framework on the backend and HTML/CSS with some JavaScript on the frontend.<br></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h2 style="color: #ebeff1;">My Contributions</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;">My main contributions were setting up the production environment in AWS, implementing the user sign-up and sign-in functionality as well implementing almost everything in the backend, except for the code that makes the memes - I integrated that into the backend.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h3 style="color: #ebeff1;">Setting Up Production Environment in AWS</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col d-flex d-xl-flex justify-content-center align-items-center justify-content-xl-center align-items-xl-center">
+                            <p style="color: #ebeff1;">As mentioned earlier, we decided to go with AWS and use several of its resources to build our application. Creating the resources and programmatically accessing them via the Python API was straightforward. The challenge was, this being a group project, figuring out how to share access to these resources with my team members.<br><br>For our development workflow, we had a GitHub repository hosting our source code. When someone wanted to work on a new feature or fix an existing one, they would create a new branch, do their work and test their changes on their machine, and finally push their work and merge their branch into the master branch, which triggers the CD pipeline and updates the EB environment.<br><br>The tricky bit is when they are building and testing locally, as they're using their own AWS credentials. I needed to share our AWS resources (the S3 bucket, DyanamoDB tables, etc.) with them so they could run and test the application locally on their machine using their AWS credentials.<br><br>This involved creating various roles and policies both on my AWS account and theirs using AWS's Identity and Access Management (IAM) service. Some services (e.g., S3) were easier than others (e.g., DynamoDB) to work out. Unlike S3, the DynamoDB tables required additional code for my team members to be able to access them programmatically. So I wrote some code for retrieving all the resources that would work regardless of whether it was running in the production environment, my machine, or any of my team member's machines, allowing my team members to focus on building the site rather than worrying about credentials and access.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h3 style="color: #ebeff1;">User Sign-up and Sign-in Functionality</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;">When you create a meme on the site, you have the option to save the meme to your own account. Other users can view your portfolio of memes and subscribe to be notified when you drop the latest meme. All of this required our application to be able to handle session management of a user.<br></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col d-md-flex justify-content-md-start align-items-md-center"><img src="assets/img/shm%20login.gif" style="width: 75%;"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;">To do this, I decided to go with a Flask extension named Flask-Login which takes care of session management. AWS has its own service called Cognito that comes with several extremely useful features, however, unlike Flask-Login, the documentation was sparse and given our timeframe, Flask-Login seemed to be the safest route.<br><br>In addition to Flask-Login, I used an AWS DynamoDB table to store the user's information (email, username, hashed password, etc.). I chose DyanmoDB because it's a NoSQL database, and NoSQL databases don't have a fixed schema - they're flexible, which was especially useful to me a as I was making constant revisions to the database schema while I was building up the site.</p>
+                        </div>
+                    </div>
+                    <div class="row flex-column flex-sm-column flex-md-column flex-lg-row flex-xl-row">
+                        <div class="col d-flex d-xl-flex justify-content-center align-items-center justify-content-xl-center align-items-xl-center">
+                            <figure class="figure"><img class="img-fluid figure-img" src="assets/img/dynamodb%20table.png">
+                                <figcaption class="figure-caption" style="color: #ebeff1;">An entry in the DynamoDB users table. Aside form the credentials, it stores separate lists for the user's subscribers, subscriptions, and memes.</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <div class="row" style="padding-top: 1rem;">
+                        <div class="col">
+                            <h3 style="color: #ebeff1;">The Backend</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;">Lastly, I worked on several other aspects of the backend. I specified the URL space for the entire site and implemented nearly all the endpoints. This includes the functionality to view and create memes, view the portfolio of another user, and view your own subscriptions and memes. A lot of this was simply a matter of querying the DynamoDB tables and retrieving the appropriate data from the S3 store that would then be used to dynamically render a HTML template into a page that would be returned to the user.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h2 style="color: #ebeff1;">What I Learned and Next Steps</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;">One of the main challenges was sharing the AWS resources with the rest of the team. This was mainly due to sparse documentation. While AWS did have some guides on this, the scenario they covered was slightly different from mine, requiring a bit more digging and experimentation. In the end I was able to get a nice solution working and it was a nice opportunity to learn about IAM.<br><br>I got a lot more familiar and comfortable using cloud services (AWS in particular). The main reason I never used them before is that the pricing always confused me, and I didn't want to accidentally end up with a massive bill, so I'm glad I got to learn more about the pricing and how to interpret it during this course.<br><br>I also learned more about building web applications, particularly with Flask and Python. User session management was new for me and interesting to learn since most websites need it to function.<br><br>I also learned a lot more about continuous deployment (using the CodePipeline pipeline) and the actual development workflow for building cloud services. However, something I'd like to learn more about is the development workflows for groups working on a cloud-based service, as the one my group followed (creating and sharing all our AWS resource from one account) was really just the first thing that came to mind, making me wonder whether there are other, more efficient workflows.<br><br>Lastly, something else I'd like to learn more about is containers and how to deploy my own to an AWS environment. While I learned about them in class I never got to try them out myself, so this is something I'd like to explore. They seem to be a lot more convenient than having to configure a separate production environment, as you can just run the container instead.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h2 style="color: #ebeff1;">Try it Out!</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;"> You can try out the website <a href="http://skyhighmemes-env.eba-3rktkkqb.us-west-2.elasticbeanstalk.com/">here</a>. If you're interested, you can view the source code <a href="https://github.com/king-shak/SkyHighMemes">here</a>.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="d-flex justify-content-center align-items-center footer-basic" style="background: url(&quot;assets/img/32b877ed4aa7778cc7d43ebb7d95a6f1.png&quot;) center / cover no-repeat, #212529c5;background-blend-mode: multiply;height: 12rem;width: 100%;position: absolute;left: 0;bottom: 0;">
+            <footer>
+                <div class="d-xl-flex justify-content-xl-center align-items-xl-center social"><a class="d-xl-flex justify-content-xl-center align-items-xl-center" href="https://github.com/king-shak" style="color: #ebeff1;"><i class="icon ion-social-github" style="color: #ebeff1;"></i></a><a class="d-xl-flex justify-content-xl-center align-items-xl-center" href="https://gitlab.com/king-shak" style="color: #ebeff1;"><i class="fab fa-gitlab" style="color: #ebeff1;"></i></a><a class="d-xl-flex justify-content-xl-center align-items-xl-center" href="https://www.linkedin.com/in/shakeel-khan-seattle/" style="color: #ebeff1;"><i class="fab fa-linkedin-in" style="color: #ebeff1;"></i></a><a class="d-xl-flex justify-content-xl-center align-items-xl-center" href="mailto:skhan001@uw.edu" style="color: #ebeff1;"><i class="far fa-envelope" style="color: #ebeff1;"></i></a><a class="d-xl-flex justify-content-xl-center align-items-xl-center" href="/assets/Resume.pdf" style="color: #ebeff1;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="color: #ebeff1;">
+                            <path d="M7 18H17V16H7V18Z" fill="currentColor"></path>
+                            <path d="M17 14H7V12H17V14Z" fill="currentColor"></path>
+                            <path d="M7 10H11V8H7V10Z" fill="currentColor"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6 2C4.34315 2 3 3.34315 3 5V19C3 20.6569 4.34315 22 6 22H18C19.6569 22 21 20.6569 21 19V9C21 5.13401 17.866 2 14 2H6ZM6 4H13V9H19V19C19 19.5523 18.5523 20 18 20H6C5.44772 20 5 19.5523 5 19V5C5 4.44772 5.44772 4 6 4ZM15 4.10002C16.6113 4.4271 17.9413 5.52906 18.584 7H15V4.10002Z" fill="currentColor"></path>
+                        </svg></a></div>
+                <ul class="list-inline">
+                    <li class="list-inline-item" style="color: #ebeff1;"><a href="index.html" style="font-family: ABeeZee, sans-serif;">About</a></li>
+                    <li class="list-inline-item"><a href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Skills</a></li>
+                    <li class="list-inline-item"><a href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Experience</a></li>
+                    <li class="list-inline-item"><a href="projects.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Projects</a></li>
+                </ul>
+                <p class="copyright" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Made with BootStrap Studio</p>
+            </footer>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+</body>
+
+</html>

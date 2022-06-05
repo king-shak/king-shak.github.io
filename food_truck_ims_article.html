@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html style="height: 100%;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Shakeel Khan</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abhaya+Libre">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Adamina">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alata">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aleo">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alice">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/Footer-Basic.css">
+    <link rel="stylesheet" href="assets/css/Header-Blue.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body style="background: rgb(23,25,35);height: 100%;">
+    <div id="holder" style="min-height: 100%;position: relative;">
+        <header style="background: url(&quot;assets/img/32b877ed4aa7778cc7d43ebb7d95a6f1.png&quot;) center / cover no-repeat;">
+            <nav class="navbar navbar-light navbar-expand-md navigation-clean" style="background: #212529c5;">
+                <div class="container"><a class="navbar-brand" href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Home</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navcol-1">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item"><a class="nav-link active" href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">About</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Skills</a></li>
+                            <li class="nav-item"><a class="nav-link" href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Experience</a></li>
+                            <li class="nav-item"><a class="nav-link" href="projects.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Projects</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div id="body" style="padding-bottom: 12rem;">
+            <section>
+                <div class="container" style="height: 100%;">
+                    <div class="row" style="padding-top: 2rem;">
+                        <div class="col">
+                            <h1 style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Food Truck Inventory Management System</h1>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col d-xl-flex justify-content-xl-start align-items-xl-center" style="padding-bottom: 0.5rem;"><img style="border-radius: 0.5rem;width: 50%;" src="assets/img/ims-landing.png"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h2 style="color: #ebeff1;">Inspiration</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;">This project was done for my database class to demonstrate our knowledge of SQL. My team and I decided to make a inventory management system (IMS) for a fleet of food trucks. I came up with the idea from reading about the difficulty in running a food truck. One of the challenges was keeping track of inventory, because unlike a typical brick-and-mortar restaurant, food trucks usually have inventory on the truck and at a warehouse. I wanted to make an IMS that would easily let fleet owners see the inventory on each truck across their entire fleet.<br><br>The IMS was made as a web application, using Python with Flask on the backend and HTML/CSS and some JavaScript on the frontend.<br></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h2 style="color: #ebeff1;">My Contributions</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;">My main contributions were leading the design of the database schema (a blueprint of our database) and building the backend of the application.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h3 style="color: #ebeff1;">Schema Design</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col d-flex d-xl-flex justify-content-center align-items-center justify-content-xl-center align-items-xl-center"><img src="assets/img/475%20Project%20Schema.png" style="width: 97%;border-top-left-radius: 0.5rem;border-top-right-radius: 0.5rem;border-bottom-right-radius: 0.5rem;border-bottom-left-radius: 0.5rem;"></div>
+                    </div>
+                    <div class="row" style="padding-top: 1rem;">
+                        <div class="col">
+                            <p style="color: #ebeff1;">Above is the ERD diagram made for the database. I lead the design of this and touched on nearly all of it, though most of my contributions were to the entities on the left. These collectively represent a <em>Meal</em>. At the bottom we have a <em>Ingredient</em>&nbsp;entity which has a many:many relationship with the <em>Meal</em>&nbsp;entity that is facilitated by the <em>MealIngredient</em> entity. This means several meals can have the same ingredient. The entity <em>MealType</em>&nbsp;is a domain table used to specify whether a meal is vegan, kosher, halal, etc.<br><br>On the right hand side we have several entities collectively representing a <em>Truck</em>. The address is represented by the <em>Address</em>&nbsp;entity and the phone number is represented by the <em>PhoneInfo</em> entity.<br><br>In the middle, we have the <em>Inventory</em> entity facilitating a many:many relationship between the <em>Truck</em> and <em>Meal</em> entities. This allows many trucks to carry the same meal.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h3 style="color: #ebeff1;">Building the Backend</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;">The backend was written in Python, using the Flask web framework with the socketio extension for Websocket support. I chose this framework mostly because I have previous experience with it, but also because it's simple, lightweight, and powerful as it comes with a lot of features.<br><br>The way the application mainly works is via HTTP requests. For example, the user may click a button (check the image below on the left/top) to look at the info of a truck (location, name, etc.). The button would have a URL that's dynamically generated, capturing the information needed by the backend. For example, if clicked the "Truck1" button, the URL would be <em>FoodTruckIMS/Truck1</em>. The backend of the application has an event handler for URL's in that form that extracts the name of the truck and queries the database for the information. It then inserts this information into a HTML template, which is then sent back to the user to be displayed in their browser (the image below on the right/bottom).</p>
+                        </div>
+                    </div>
+                    <div class="row flex-column flex-sm-column flex-md-column flex-lg-row flex-xl-row">
+                        <div class="col d-flex d-xl-flex justify-content-center align-items-center justify-content-xl-center align-items-xl-center"><img src="assets/img/ims-landing.png" style="width: 100%;padding: 0.5rem;"></div>
+                        <div class="col d-flex d-md-flex d-lg-flex d-xl-flex justify-content-center align-items-center justify-content-md-center align-items-md-center justify-content-lg-center align-items-lg-center justify-content-xl-center align-items-xl-center"><img src="assets/img/ims-truck-info.png" style="width: 95%;border-top-left-radius: 0.5rem;border-top-right-radius: 0.5rem;border-bottom-right-radius: 0.5rem;border-bottom-left-radius: 0.5rem;padding: 0.5rem;"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;padding-bottom: 1rem;padding-top: 1rem;">A WebSocket was used on the meal page, which displays the ingredients of a meal and its current inventory. You can update the inventory by entering a new value, or using the buttons on the sides. This utilized the Websocket to update the inventory in real-time, which can be seen if you had another client looking at the same meal.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col d-flex d-sm-flex d-md-flex d-lg-flex d-xl-flex justify-content-start align-items-start justify-content-sm-start align-items-sm-center justify-content-md-start align-items-md-center justify-content-lg-start align-items-lg-center justify-content-xl-start align-items-xl-center"><img class="d-md-flex d-lg-flex" src="assets/img/ims-meal-info.png" style="width: 50%;"></div>
+                    </div>
+                    <div class="row" style="padding-top: 1rem;">
+                        <div class="col">
+                            <h2 style="color: #ebeff1;">Challenges</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;">One challenge was preventing SQL injection attacks. While I understood what they were, how they are executed and how to prevent them, it was hard to actually get the countermeasures working. The database I used, PosgreSQL, let you to prepare statements and would supposedly sanitize your input when you executed them, but it never worked for me. I tried to prepare statements using the Python API I was using for interacting with the database, <em>psycopg2</em>, but this didn't work either.<br><br>I'm not sure if this was an error on my part or a broken API, so what I eventually did was write my own code to sanitize inputs. It would search the string for anything malicious and return a boolean value indicating whether the input was safe, which worked well.<br><br>Another challenge was that one of my team members was a business student and had little experience with coding. Sometimes they would suggest a feature that with their limited experience seemed relatively feasible, when it actually wasn't. Being able to explain <em>why</em> it wasn't rather than just saying so was difficult at times, either due to their lack of technical knowledge or my struggle to explain clearly. However, this person also brought up ideas that I with my background would have never considered, some of which ended up in the final product.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h2 style="color: #ebeff1;">What I Learned</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;">This project solidified my understanding of SQL, from crafting queries to designing my own database. I learned of some of the security issues when building an application, such as injection attacks, and how they can be prevented. I also learned some more about frontend and how you could use a templating engine like Jinja to create dynamic HTML pages. Overall, this project was a lot more interesting than I expected and re-ignited an interest in backend development. </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <h2 style="color: #ebeff1;">See the Code</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <p style="color: #ebeff1;"><a href="https://github.com/king-shak/FoodTruckIMS">Here</a> is the source code.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="d-flex justify-content-center align-items-center footer-basic" style="background: url(&quot;assets/img/32b877ed4aa7778cc7d43ebb7d95a6f1.png&quot;) center / cover no-repeat, #212529c5;background-blend-mode: multiply;height: 12rem;width: 100%;position: absolute;left: 0;bottom: 0;">
+            <footer>
+                <div class="d-xl-flex justify-content-xl-center align-items-xl-center social"><a class="d-xl-flex justify-content-xl-center align-items-xl-center" href="https://github.com/king-shak" style="color: #ebeff1;"><i class="icon ion-social-github" style="color: #ebeff1;"></i></a><a class="d-xl-flex justify-content-xl-center align-items-xl-center" href="https://gitlab.com/king-shak" style="color: #ebeff1;"><i class="fab fa-gitlab" style="color: #ebeff1;"></i></a><a class="d-xl-flex justify-content-xl-center align-items-xl-center" href="https://www.linkedin.com/in/shakeel-khan-seattle/" style="color: #ebeff1;"><i class="fab fa-linkedin-in" style="color: #ebeff1;"></i></a><a class="d-xl-flex justify-content-xl-center align-items-xl-center" href="mailto:skhan001@uw.edu" style="color: #ebeff1;"><i class="far fa-envelope" style="color: #ebeff1;"></i></a><a class="d-xl-flex justify-content-xl-center align-items-xl-center" href="/assets/Resume.pdf" style="color: #ebeff1;"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" fill="none" style="color: #ebeff1;">
+                            <path d="M7 18H17V16H7V18Z" fill="currentColor"></path>
+                            <path d="M17 14H7V12H17V14Z" fill="currentColor"></path>
+                            <path d="M7 10H11V8H7V10Z" fill="currentColor"></path>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6 2C4.34315 2 3 3.34315 3 5V19C3 20.6569 4.34315 22 6 22H18C19.6569 22 21 20.6569 21 19V9C21 5.13401 17.866 2 14 2H6ZM6 4H13V9H19V19C19 19.5523 18.5523 20 18 20H6C5.44772 20 5 19.5523 5 19V5C5 4.44772 5.44772 4 6 4ZM15 4.10002C16.6113 4.4271 17.9413 5.52906 18.584 7H15V4.10002Z" fill="currentColor"></path>
+                        </svg></a></div>
+                <ul class="list-inline">
+                    <li class="list-inline-item" style="color: #ebeff1;"><a href="index.html" style="font-family: ABeeZee, sans-serif;">About</a></li>
+                    <li class="list-inline-item"><a href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Skills</a></li>
+                    <li class="list-inline-item"><a href="index.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Experience</a></li>
+                    <li class="list-inline-item"><a href="projects.html" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Projects</a></li>
+                </ul>
+                <p class="copyright" style="color: #ebeff1;font-family: ABeeZee, sans-serif;">Made with BootStrap Studio</p>
+            </footer>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+</body>
+
+</html>
